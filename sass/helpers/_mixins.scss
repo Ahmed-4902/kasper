@@ -1,0 +1,74 @@
+// Start Mixin For Position & Flex
+@mixin flex-center() {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+@mixin flex($jc: flex-start, $ai: stretch, $wrap: nowrap) {
+   display: flex;
+   justify-content: $jc;
+   align-items: $ai;
+   flex-wrap: $wrap;
+}
+
+@mixin position-center {
+   position: relative;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+// End Mixin For Position & Flex
+
+// Start Mixin For Shapes
+@mixin triangleBottom($size, $color, $fake) {
+   width: 0;
+   height: 0;
+   border-top: $size solid $color;
+   border-left: $fake solid transparent;
+   border-right: $fake solid transparent;
+}
+
+@mixin triangleTop($size, $color, $fake) {
+   width: 0;
+   height: 0;
+   border-bottom: $size solid $color;
+   border-left: $fake solid transparent;
+   border-right: $fake solid transparent;
+}
+// End Mixin For Shapes
+
+@mixin overlay($color) {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: $color;
+}
+
+// Start Mixin For Media
+
+// Phone
+@mixin phone {
+   @media (max-width: 767px) {
+      @content;
+   }
+}
+
+// Tablet
+@mixin tablet {
+   @media (min-width: 768px) and (max-width: 991px) {
+      @content;
+   }
+}
+
+// Large
+@mixin large {
+   @media (min-width: 992px) {
+      @content;
+   }
+}
+
+// End Mixin For Media

@@ -1,0 +1,54 @@
+/* Start Variables  */
+$main-color: #19c8fa;
+$transparent-color: rgb(15 116 143 / 70%);
+$light-color: #777;
+$section-padding: 100px;
+
+/* End Variables  */
+
+/* Start global Rules  */
+
+* {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+   text-transform: capitalize;
+   transition: 0.5s;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+   font-family: "open sans", sans-serif;
+}
+
+ul {
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+}
+.container {
+   padding-left: 15px;
+   padding-right: 15px;
+   margin-left: auto;
+   margin-right: auto;
+}
+@media (min-width: 768px) {
+   .container {
+      width: 750px;
+   }
+}
+@media (min-width: 992px) {
+   .container {
+      width: 970px;
+   }
+}
+@media (min-width: 1200px) {
+   .container {
+      width: 1170px;
+   }
+}
